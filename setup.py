@@ -6,7 +6,7 @@ setup(
     description="",
     author="williamfzc",
     author_email="williamfzc@foxmail.com",
-    url="github.com/williamfzc/sbom-rule-diff",
+    url="https://github.com/williamfzc/sbom-rule-diff",
     packages=find_packages(),
     include_package_data=True,
     license="MIT",

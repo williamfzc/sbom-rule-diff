@@ -1,1 +1,2 @@
-from .api import Rule, DefaultRunner, StrictRunner
+from .runner import DefaultRunner, StrictRunner
+from .rule import Rule

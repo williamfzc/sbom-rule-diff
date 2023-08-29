@@ -1,23 +1,14 @@
 import typing
 
-from spdx_tools.spdx.model.document import Document
+from spdx_tools.spdx.model import Document
 from spdx_tools.spdx.parser.parse_anything import parse_file
+
+from sbom_rule_diff import Rule
+from sbom_rule_diff.rule import RuleCheckFailException
 
 
 def file2doc(f: str) -> Document:
     return parse_file(f)
-
-
-class RuleCheckFailException(RuntimeError):
-    pass
-
-
-class Rule(object):
-    def key(self) -> str:
-        raise NotImplementedError
-
-    def apply(self, doc_a: Document, doc_b: Document) -> bool:
-        raise NotImplementedError
 
 
 class _Runner(object):
